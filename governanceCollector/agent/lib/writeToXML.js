@@ -63,7 +63,7 @@ function replaceInvalidChars(data) {
             }
 
             newData = newData.replace(prop, newPropName);
-            logger.warn(`Invalid XML attribute name detected, replacing ${prop} with ${newPropName}`);
+            logger.warn(`Invalid XML attribute name detected, replacing ${prop} with ${newPropName}`, loggerObject);
         }
     });
 
