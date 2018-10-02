@@ -23,6 +23,7 @@ module.exports = {
                         var expression_fields = qelParser.parse(expression);
                     } catch (err) {
                         logMessage("warn", "Unable to parse expression.  Please check the log for more information " + expression);
+                        logMessage("warn", "Parse error for above: " + JSON.stringify(err));
                         cleanup_fields = false;
                         resolve({ expressionFields: "", expressionFieldsError: err.message });
                     }
